@@ -1,9 +1,10 @@
 package main
 
 import "fmt"
-import "data"
+import "github.com/micro-search/go-search/data"
 
 func main() {
-	conn := data.New()
-	fmt.Println("conn")
+	conn := data.NewConnection()
+	fmt.Println(conn)
+	conn.Connect()
 }

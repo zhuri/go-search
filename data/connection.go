@@ -23,10 +23,12 @@ func NewConnection() *Connection {
 
 func (c *Connection) Connect() {
 	credentials := c.Username + ":" + c.Password + "@/" + c.Database
+	fmt.Println(credentials)
 	db, err := sql.Open("mysql", credentials)
 
 	if err != nil {
-		fmt.Println(db)
+		fmt.Println("success", db)
 	}
-	fmt.Println(err)
+
+	fmt.Println("errr", err)
 }
