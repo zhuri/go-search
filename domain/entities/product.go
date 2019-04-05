@@ -4,5 +4,5 @@ type Product struct {
 	ID          int32
 	Name        string
 	Description string
-	Price       float32
+	Qty         float32
 }
