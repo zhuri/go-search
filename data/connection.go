@@ -17,18 +17,18 @@ func NewConnection() *Connection {
 	return &Connection{
 		"endrit",
 		"endrit",
-		"pms",
+		"catalog",
 	}
 }
 
 func (c *Connection) Connect() {
-	credentials := c.Username + ":" + c.Password + "@/" + c.Database
-	fmt.Println(credentials)
-	db, err := sql.Open("mysql", credentials)
+	// credentials := c.Username + ":" + c.Password + "@/" + c.Database
+	// fmt.Println(credentials)
+	db, err := sql.Open("mysql", "endrit:endrit@/catalog")
 
 	if err != nil {
-		fmt.Println("success", db)
+		fmt.Println("err", err)
 	}
 
-	fmt.Println("errr", err)
+	fmt.Println("success", db)
 }
