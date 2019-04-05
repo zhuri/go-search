@@ -25,7 +25,7 @@ func Test_AddProduct_PriceIsNegativ(t *testing.T) {
 	sut := NewCatalog()
 
 	err := sut.AddProduct("name", "description", -1)
-	if err != InvalidPriceErr {
+	if err != InvalidQtyErr {
 		t.Error("Add Product Faild. Wanted : Positive Proce, Got: Negative Price! ", err)
 	}
 }
