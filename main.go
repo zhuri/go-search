@@ -1,10 +1,8 @@
 package main
 
-import (
-	"fmt"
+import gateway "github.com/micro-search/go-search/gateway"
 
-	"github.com/micro-search/go-search/domain/entities"
-)
+// "github.com/micro-search/go-search/domain/entities"
 
 func main() {
 	// conn := data.NewConnection()
@@ -28,7 +26,9 @@ func main() {
 	// 	fmt.Printf("%#v\n", product)
 	// }
 
-	catalog := entities.NewCatalog()
-	res, _ := catalog.SearchProducts("name1", "desc1")
-	fmt.Println(res)
+	// catalog := entities.NewCatalog()
+	// res, _ := catalog.SearchProducts("name1", "desc1")
+	// fmt.Println(res)
+
+	gateway.Handle()
 }
