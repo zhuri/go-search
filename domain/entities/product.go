@@ -1,8 +1,7 @@
 package entities
 
 type Product struct {
-	ID          int32
-	Name        string
-	Description string
-	Qty         float32
+	Name        string `json:"name"`
+	Description string `json:"description"`
+	Qty         int    `json:"qty"`
 }

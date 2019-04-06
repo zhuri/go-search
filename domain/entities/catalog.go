@@ -67,7 +67,7 @@ func (c *Catalog) GetAllProducts() ([]Product, error) {
 
 	product := Product{}
 	for res.Next() {
-		err := res.Scan(&product.ID, &product.Name, &product.Description, &product.Qty)
+		err := res.Scan(&product.Name, &product.Description, &product.Qty)
 		if err != nil {
 			log.Fatalln(err)
 		}
@@ -89,7 +89,7 @@ func (c *Catalog) SearchProducts(name, description string) ([]Product, error) {
 
 	product := Product{}
 	for res.Next() {
-		err := res.Scan(&product.ID, &product.Name, &product.Description, &product.Qty)
+		err := res.Scan(&product.Name, &product.Description, &product.Qty)
 		if err != nil {
 			log.Fatalln(err)
 		}
